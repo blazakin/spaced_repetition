@@ -13,7 +13,6 @@ while True:
     if message == 'Exit':
         break
 
-    card_list = message.split(';')
-    card_list = card_list[:-1]
+    card_list = message.split(';')[:-1]
 
     socket.send_string(card_list[random.randint(0, len(card_list)-1)])
